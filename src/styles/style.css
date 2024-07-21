@@ -1,0 +1,149 @@
+@import url(/src/styles/fonts.css);
+
+/* reset */
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* root */
+:root {
+  --color-button-primary: #219f95;
+  --color-button-secondry: #ffffff;
+  --color-square: #bfdbfe;
+  --color-text-square: #234894;
+  --color-text-heading: #1e1e1e;
+  --color-text-secondary: #696969;
+
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+
+  --font-size-tiny: 12px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 22px;
+}
+
+/* styles and typografy*/
+body {
+  font-family: Vazirmatn;
+  text-align: right;
+  margin: 5rem;
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 7rem;
+}
+
+p {
+  color: var(--color-text-heading);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.backdrop {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5rem;
+  column-gap: 10rem;
+  float: right;
+}
+
+.modal {
+  width: 41rem;
+  height: 20rem;
+  padding: 2rem;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-tiny);
+  margin-bottom: 0.5rem;
+}
+
+.figure {
+  color: var(--color-text-square);
+  font-weight: bold;
+  font-size: var(--font-size-sm);
+}
+
+.square {
+  background: var(--color-square);
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+  align-content: center;
+}
+
+.modal__content {
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md);
+  font-weight: 900;
+}
+.modal__ID {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-tiny);
+}
+
+.modal__info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+span {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.name,
+.text {
+  padding: 0.5rem;
+}
+
+img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  background: var(--color-button-primary);
+  border-radius: var(--border-radius-md);
+  width: 15rem;
+  height: 6.4rem;
+  font-weight: 500;
+  font-family: Vazirmatn;
+  color: var(--color-button-secondry);
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+  .backdrop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .backdrop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
